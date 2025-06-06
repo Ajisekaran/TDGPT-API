@@ -1,0 +1,5 @@
+myenv
+.env
+__pycache__
+Data_Collection
+Data_Extraction/pdf_Extraction/output
