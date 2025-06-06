@@ -4,8 +4,8 @@ import base64
 from PIL import Image
 import aiofiles
 import pytesseract
-from app.services.image_caption import describe_image
-from app.core.config import OUTPUT_DIRECTORY, GROQ_API_KEY, GROQ_MODEL
+from image_caption import describe_image
+from config import OUTPUT_DIRECTORY, GROQ_API_KEY, GROQ_MODEL
 from groq import Groq
 import asyncio
 
@@ -40,7 +40,7 @@ async def generate_full_image_data_async():
 
             for idx, img_path in enumerate(images, start=1):
                 if not os.path.exists(img_path):
-                    print(f"⚠️ Skipping missing image: {img_path}")
+                    print(f" Skipping missing image: {img_path}")
                     continue
 
                 try:
